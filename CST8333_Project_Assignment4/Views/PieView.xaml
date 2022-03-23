@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="CST8333_Project_Assignment4.Views.PieView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CST8333_Project_Assignment4.Views" xmlns:viewmodels="clr-namespace:CST8333_Project_Assignment4.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:PieViewModel}"
+             mc:Ignorable="d" Background="#ddd"
+             d:DesignHeight="310" d:DesignWidth="610">
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0" />
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="350" />
+            <ColumnDefinition Width="0" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0" />
+            <RowDefinition Height="250" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="0" />
+        </Grid.RowDefinitions>
+
+        <Ellipse Grid.Row="1" Grid.Column="1"
+            Fill="Gray" Stroke="White" StrokeThickness="5" Height="250" Width="250"/>
+
+
+        <ItemsControl Grid.Row="1" Grid.Column="1"  ItemsSource="{Binding Path=Lines}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Canvas Background="Transparent" Width="250" Height="250"  />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Line X1="{Binding X1}" Y1="{Binding Y1}" X2="{Binding X2}" Y2="{Binding Y2}" Stroke="{Binding Color}" StrokeThickness="3" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <Ellipse Grid.Row="1" Grid.Column="1"
+                    Fill="LightGray" Stroke="White" StrokeThickness="5" Height="100" Width="100"/>
+        
+        <Button Grid.Row="2" Grid.Column="2" x:Name="ClosePie" Margin="150, 20, 10, 10">Close Pie</Button>
+        <Grid Grid.Row="1" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25" />
+                <ColumnDefinition Width="175" />
+                <ColumnDefinition Width="150" />
+                <ColumnDefinition Width="25" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="10" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="30" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Rectangle Grid.Row="1" Grid.Column="1" Margin="0, 10, 165, 10" Fill="Orange" StrokeThickness="1" Stroke="Black"/> <TextBlock Text="Alberta" Grid.Row="1" Grid.Column="1" Margin="15, 5, 0, 5"/>
+            <Rectangle Grid.Row="2" Grid.Column="1" Margin="0, 10, 165, 10" Fill="LightBlue" StrokeThickness="1" Stroke="Black"/> <TextBlock Text="British Columbia" Grid.Row="2" Grid.Column="1" Margin="15, 5, 0, 5"/>
+            <Rectangle Grid.Row="3" Grid.Column="1" Margin="0, 10, 165, 10" Fill="Red" StrokeThickness="1" Stroke="Black"/> <TextBlock Text="Manitoba" Grid.Row="3" Grid.Column="1" Margin="15, 5, 0, 5"/>
+            <Rectangle Grid.Row="4" Grid.Column="1" Margin="0, 10, 165, 10" Fill="Green" StrokeThickness="1" Stroke="Black"/> <TextBlock Text="New Brunswick" Grid.Row="4" Grid.Column="1" Margin="15, 5, 0, 5"/>
+            <Rectangle Grid.Row="5" Grid.Column="1" Margin="0, 10, 165, 10" Fill="Yellow" StrokeThickness="1" Stroke="Black"/> <TextBlock Text="Newfoundland and Labrador" Grid.Row="5" Grid.Column="1" Margin="15, 5, 0, 5"/>
+            <Rectangle Grid.Row="6" Grid.Column="1" Margin="0, 10, 165, 10" Fill="Purple" StrokeThickness="1" Stroke="Black"/> <TextBlock Text="Northwest Territories" Grid.Row="6" Grid.Column="1" Margin="15, 5, 0, 5"/>
+            <Rectangle Grid.Row="7" Grid.Column="1" Margin="0, 10, 165, 10" Fill="DarkBlue" StrokeThickness="1" Stroke="Black"/> <TextBlock Text="Nova Scotia" Grid.Row="7" Grid.Column="1" Margin="15, 5, 0, 5"/>
+            <Rectangle Grid.Row="1" Grid.Column="2" Margin="0, 10, 140, 10" Fill="DarkGreen" StrokeThickness="1" Stroke="Black"/> <TextBlock Text="Nunavut" Grid.Row="1" Grid.Column="2" Margin="15, 5, 0, 5"/>
+            <Rectangle Grid.Row="2" Grid.Column="2" Margin="0, 10, 140, 10" Fill="Brown" StrokeThickness="1" Stroke="Black"/> <TextBlock Text="Ontario" Grid.Row="2" Grid.Column="2" Margin="15, 5, 0, 5"/>
+            <Rectangle Grid.Row="3" Grid.Column="2" Margin="0, 10, 140, 10" Fill="LightGreen" StrokeThickness="1" Stroke="Black"/><TextBlock Text="Prince Edward Island" Grid.Row="3" Grid.Column="2" Margin="15, 5, 0, 5"/>
+            <Rectangle Grid.Row="4" Grid.Column="2" Margin="0, 10, 140, 10" Fill="Pink" StrokeThickness="1" Stroke="Black"/> <TextBlock Text="Quebec" Grid.Row="4" Grid.Column="2" Margin="15, 5, 0, 5"/>
+            <Rectangle Grid.Row="5" Grid.Column="2" Margin="0, 10, 140, 10" Fill="Blue" StrokeThickness="1" Stroke="Black"/> <TextBlock Text="Saskatchewan" Grid.Row="5" Grid.Column="2" Margin="15, 5, 0, 5"/>
+            <Rectangle Grid.Row="6" Grid.Column="2" Margin="0, 10, 140, 10" Fill="LightGray" StrokeThickness="1" Stroke="Black"/> <TextBlock Text="Yukon" Grid.Row="6" Grid.Column="2" Margin="15, 5, 0, 5"/>
+            <TextBlock Text="Aleksandr Anseev" Grid.Row="7" Grid.Column="2" Margin="15, 5, 0, 5"/>
+
+        </Grid>
+
+        <Button x:Name="OneDose" Grid.Column="1" Grid.Row="2" Margin="0, 20, 175, 10">One dose</Button>
+        <Button x:Name="PartialDose" Grid.Column="1" Grid.Row="2" Margin="80, 20, 100, 10">Partial Dose</Button>
+        <Button x:Name="FullDose" Grid.Column="1" Grid.Row="2" Margin="155, 20, 10, 10">Full Dose</Button>
+        
+        
+    </Grid>
+</UserControl>

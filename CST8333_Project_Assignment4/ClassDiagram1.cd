@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="CST8333_Project_Assignment2.Models.VaccineModel">
+    <Position X="0.5" Y="2.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAABAEIAAgAAAAAABgAABAAACAAMABAABQAAACCAAA=</HashCode>
+      <FileName>Models\VaccineModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CST8333_Project_Assignment2.ViewModels.ShellViewModel">
+    <Position X="6" Y="0.5" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAEAAAAEAAAQQAAACAAAAAAACAAAAAAAAAAAAE=</HashCode>
+      <FileName>ViewModels\ShellViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CST8333_Project_Assignment2.DataAccess">
+    <Position X="0.5" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
